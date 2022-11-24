@@ -1,0 +1,245 @@
+.hero {
+  width: 100vw;
+  height: 100vh;
+  background: url("../images/hero.JPG") no-repeat center center/cover;
+  position: relative;
+  z-index: 10;
+}
+.hero:before {
+  width: 100vw;
+  height: 100vh;
+  content: "";
+  top: 0;
+  left: 0;
+  position: absolute;
+  background-color: black;
+  opacity: 0.7;
+  z-index: -1;
+}
+.heroMunBranding {
+  width: 100%;
+  height: 100%;
+}
+.heroMunBranding img {
+  /* margin-top: 10vmax; */
+  width: 10vmax;
+  animation: show 1.5s ease-in-out forwards;
+}
+.heroTitle {
+  margin-top: 1vmax;
+  font-size: 2.5vmax;
+  text-transform: uppercase;
+  font-weight: 600;
+  color: var(--heading);
+  opacity: 0;
+  animation: show2 3s ease-in-out  forwards;
+}
+.heroTitle2 {
+  font-weight: 500;
+  font-size: 2vmax;
+  margin: 0.2vmax 0;
+  opacity: 0;
+  animation: show2 3s ease-in-out 1s forwards;
+}
+.heroTitle3 {
+  font-weight: 500;
+  font-size: 2.5vmax;
+  margin: 1.5vmax 0;
+  opacity: 0;
+  color: var(--fontcolor);
+  animation: show2 3s ease-in-out 1.5s forwards;
+}
+.heroBtn {
+  font-size: 3vmax;
+  font-weight: 500;
+  padding: 2vmax 4vmax;
+  border: 2px solid var(--fontcolor);
+  margin: 2vmax 0;
+  opacity: 0;
+  animation: show4 3s ease-in-out 2s forwards;
+  transition: all 0.3s ease-in-out;
+}
+.heroBtn:hover {
+    box-shadow: 0 0 20px 0 var(--heading);
+    border: 2px solid var(--heading);
+}
+.heroBtn span {
+  font-size: 3vmax;
+  color: var(--heading);
+}
+/* ABOUT SECTION  */
+
+.aboutIntroSection {
+  display: flex;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.introDetails {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin-top: 3vmax;
+}
+.introDetails img {
+  width: 35%;
+}
+.aboutHeading {
+  color: var(--invertfont);
+  font-size: 1.5vmax;
+  font-weight: 500;
+  font-style: italic;
+}
+.introHeading {
+  font-size: 2.4vmax;
+  text-transform: uppercase;
+  margin-top: 0.2rem;
+  color: var(--invertfont);
+  font-weight: 500;
+}
+.introDescription {
+  color: var(--invertfont);
+  margin-top: 2vmax;
+  font-size: 1.5vmax;
+  word-spacing: 0.2rem;
+}
+.introBtn {
+  padding: 1vmax 2vmax;
+  background-color: var(--heading);
+  width: auto;
+  margin-top: 2vmax;
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 grey;
+  transition: all 0.2s ease-in-out;
+  color: var(--invertfont);
+  font-size: 1vmax;
+  font-weight: 500;
+  margin-bottom: 2vmax;
+}
+.introBtn:hover {
+  box-shadow: 0 0 3px 0 grey;
+
+  background-color: var(--headingHover);
+}
+.introImg {
+  width: 30%;
+  margin-top: 3vmax;
+  box-shadow: 0 0 10px 0 grey;
+}
+.introImg img {
+  width: 100%;
+}
+.aboutBoxes {
+  width: 85%;
+  margin: auto;
+  margin-top: 2vmax;
+  display: flex;
+}
+.aboutBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1vmax 2vmax;
+  border: 2px solid var(--fontcolor);
+  background:var(--heading);
+  background: linear-gradient(
+    180deg,
+    var(--heading) 0%,
+    var(--invertfont) 100%
+  );
+  text-align: center;
+}
+.boxText span{
+    font-size: 2vmax;
+    font-weight: 500;
+}
+.boxText {
+  font-size: 1.2vmax;
+  font-weight: 400;
+  text-transform: uppercase;
+}
+@media only screen and (max-width: 400px) {
+  .heroMunBranding img {
+    width: 150px;
+  }
+  .heroTitle {
+    font-size: 1rem;
+  }
+  .heroTitle2 {
+    font-size: 0.8rem;
+  }
+  .heroTitle3 {
+    font-size: 0.7rem;
+  }
+  .aboutBoxes{
+    flex-direction: column;
+  }
+  .aboutBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    padding: 1vmax ;
+  }
+  .aboutIntroSection{
+    flex-direction: column;
+    width: 100%;
+  }
+  .introDetails{
+    width: 100%;
+  }
+  .introImg{
+    width: 80%;
+  }
+  .aboutHeading{
+    font-size: 2.5vmax;
+  }
+  .introHeading{
+    font-size: 3vmax;
+  }
+  .introDescription{
+    font-size: 2.5vmax;
+  }
+  .introBtn{
+    font-size: 2.5vmax;
+  }
+  .introDetails img{
+    width: 80%;
+  }
+  .aboutIntroSection:nth-child(1){
+    flex-direction: column;
+  }
+}
+@keyframes show {
+  0% {
+    opacity: 0;
+    transform: translateY(-500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes show2 {
+  0% {
+    opacity: 0;
+    transform: translateX(-5000px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+@keyframes show4 {
+  0% {
+    opacity: 0;
+    transform: translateY(500px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
