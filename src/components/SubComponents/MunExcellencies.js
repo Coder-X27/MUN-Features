@@ -1,5 +1,4 @@
 import React from 'react'
-import '../../styles/MunExcellencies.css'
 import { AiOutlinePropertySafety } from 'react-icons/ai'
 import { FaConnectdevelop, FaNetworkWired, FaPeopleArrows } from 'react-icons/fa'
 import { GiDiamondTrophy, GiSkills } from 'react-icons/gi'
