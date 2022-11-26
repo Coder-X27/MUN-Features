@@ -32,7 +32,7 @@
   font-weight: 600;
   color: var(--heading);
   opacity: 0;
-  animation: show2 3s ease-in-out  forwards;
+  animation: show2 3s ease-in-out forwards;
 }
 .heroTitle2 {
   font-weight: 500;
@@ -60,8 +60,8 @@
   transition: all 0.3s ease-in-out;
 }
 .heroBtn:hover {
-    box-shadow: 0 0 20px 0 var(--heading);
-    border: 2px solid var(--heading);
+  box-shadow: 0 0 20px 0 var(--heading);
+  border: 2px solid var(--heading);
 }
 .heroBtn span {
   font-size: 3vmax;
@@ -144,7 +144,7 @@
   width: 100%;
   padding: 1vmax 2vmax;
   border: 2px solid var(--fontcolor);
-  background:var(--heading);
+  background: var(--heading);
   background: linear-gradient(
     180deg,
     var(--heading) 0%,
@@ -152,14 +152,118 @@
   );
   text-align: center;
 }
-.boxText span{
-    font-size: 2vmax;
-    font-weight: 500;
+.boxText span {
+  font-size: 2vmax;
+  font-weight: 500;
 }
 .boxText {
   font-size: 1.2vmax;
   font-weight: 400;
   text-transform: uppercase;
+}
+/* MUN EXCELLENCIES */
+
+.line {
+  width: 25%;
+  margin: 1vmax 0;
+}
+.munExcellencies {
+  width: 100vw;
+  min-height: 100vh;
+  z-index: 10;
+  /* background-color: rgba(0, 0, 0, 0.9); */
+  background: linear-gradient(
+    100deg,
+    rgba(128, 87, 4, 1) 0%,
+    rgba(0, 0, 0, 0.9) 30%
+  );
+}
+
+.excellenciesCard {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5vmax;
+}
+.card {
+  width: 100%;
+  max-height: 17rem;
+  transition: all 1s ease-in-out;
+  /* background-color: wheat; */
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.cardTitle {
+  color: var(--heading);
+  font-size: 1.3vmax;
+}
+.cardDescription {
+  color: var(--invertfont);
+  font-size: 1.1vmax;
+  letter-spacing: 0.1vmax;
+  word-spacing: 0.4vmax;
+  font-weight: 500;
+}
+.cardImg {
+  padding: 1vmax;
+  background-color: var(--heading);
+  border-radius: 50%;
+}
+.cardLogo {
+  font-size: 2rem;
+}
+.agenda {
+  width: 100vw;
+  min-height: 100vh;
+  background: linear-gradient(
+    270deg,
+    rgba(128, 87, 4, 1) 0%,
+    rgba(0, 0, 0, 0.9) 30%
+  );
+}
+.agendaBoxes {
+  width: 100%;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.agendaBox {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  padding: 3vmax 2vmax;
+  background-color: var(--fontcolor);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 0 grey;
+  transition: all 0.3s ease-in-out;
+  margin: 3vmax 1.5vmax;
+  min-height: 13rem;
+}
+.agendaBox:hover {
+  transform: scale(1.01);
+  box-shadow: 0 0 5px 0 grey;
+}
+.agendaTImg {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+.agendaTImg img {
+  width: 30%;
+}
+.agendaTitle {
+  color: var(--heading);
+  font-size: 2vmax;
+  font-weight: 600;
+}
+.agendaDescription {
+  color: var(--invertfont);
+  font-size: 1.2vmax;
+  font-weight: 500;
+  word-spacing: 0.4rem;
 }
 @media only screen and (max-width: 400px) {
   .heroMunBranding img {
@@ -174,7 +278,7 @@
   .heroTitle3 {
     font-size: 0.7rem;
   }
-  .aboutBoxes{
+  .aboutBoxes {
     flex-direction: column;
   }
   .aboutBox {
@@ -182,35 +286,73 @@
     justify-content: center;
     align-items: center;
     width: 90%;
-    padding: 1vmax ;
+    padding: 1vmax;
   }
-  .aboutIntroSection{
+  .aboutIntroSection {
     flex-direction: column;
     width: 100%;
   }
-  .introDetails{
+  .introDetails {
     width: 100%;
   }
-  .introImg{
+  .introImg {
     width: 80%;
   }
-  .aboutHeading{
+  .aboutHeading {
     font-size: 2.5vmax;
   }
-  .introHeading{
+  .introHeading {
     font-size: 3vmax;
   }
-  .introDescription{
+  .introDescription {
     font-size: 2.5vmax;
   }
-  .introBtn{
+  .introBtn {
     font-size: 2.5vmax;
   }
-  .introDetails img{
+  .introDetails img {
     width: 80%;
   }
-  .aboutIntroSection:nth-child(1){
+  .aboutIntroSection:nth-child(1) {
     flex-direction: column;
+  }
+  .excellenciesCard {
+    flex-direction: column;
+  }
+  .cardTitle {
+    font-size: 2.5vmax;
+  }
+  .cardDescription {
+    font-size: 1.3vmax;
+    letter-spacing: 0;
+  }
+  .sectionTitle {
+    font-size: 4vmax;
+    text-align: center;
+  }
+  .sectionTitle span {
+    font-size: 4vmax;
+  }
+  .agendaBox {
+    width: 100%;
+    padding: 3vmax 2vmax;
+    min-height: 5rem;
+    margin: 1vmax 0vmax;
+    word-spacing: 0.2vmax;
+    font-weight: 500;
+  }
+  .agendaDescription {
+    font-size: 1.3vmax;
+    word-spacing: 0.2rem;
+  }
+  .sectionTitle2 {
+    font-size: 4vmax;
+  }
+  .sectionTitle2 span {
+    font-size: 4vmax;
+  }
+  .line {
+    width: 80%;
   }
 }
 @keyframes show {

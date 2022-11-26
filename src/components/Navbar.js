@@ -36,6 +36,9 @@ const Navbar = () => {
                             <li><a href="#about" data-after="Agenda">Agenda</a></li>
                             <li><a href="#contact" data-after="Gallery">Gallery</a></li>
                             <li><a href="#contact" data-after="Team">Team</a></li>
+                            <li><a href="#contact" data-after="Team">MUN</a></li>
+                            <li><a href="#contact" data-after="Team">Sponsers</a></li>
+                            <li><a href="#contact" data-after="Team">Events</a></li>
                             <li><a href="#contact" data-after="Contact">Contact</a></li>
                         </ul>
                     </div>

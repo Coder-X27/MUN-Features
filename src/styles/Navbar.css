@@ -154,12 +154,15 @@
 }
 @media only screen and (min-width: 1100px) {
     /* header */
+    #header{
+        background-color: rgba(0, 0, 0, 0.6);
+    }
     .brand{
-        width: 30%;
+        width: 20%;
         margin: auto;
     }
     .nav-list{
-        width: 60%;
+        width: 80%;
         margin: auto;
     }
     #header .hamburger {
@@ -176,7 +179,7 @@
         display: inline-block;
     }
     #header .nav-list ul li a {
-        font-size: .8vmax;
+        font-size:1vmax;
     }
     #header .nav-list ul a:after {
         display: none;

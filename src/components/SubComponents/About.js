@@ -34,7 +34,7 @@ const About = () => {
             <div className="aboutIntroSection">
                 
                 <Tilt className="introImg">
-                    <img src={require('../../images/aboutIntro.png')} alt="" />
+                    <img src={require('../../images/munGreyLogo.png')} alt="" />
                 </Tilt>
                 <div className="introDetails">
                     <h1 className="introHeading">Zero Hour Summit</h1>
