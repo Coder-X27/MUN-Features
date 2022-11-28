@@ -10,7 +10,6 @@
 
 #header .header {
     min-height: 8vh;
-    background-color: rgba(0, 0, 0, 0.271);
     transition: 0.3s ease background-color;
 }
 
@@ -155,12 +154,16 @@
 @media only screen and (min-width: 1100px) {
     /* header */
     #header{
-        background-color: rgba(0, 0, 0, 0.6);
+        background-color: transparent;
     }
     .brand{
-        width: 20%;
+        width: 40%;
         margin: auto;
+        display: flex;
+        justify-content: center;
     }
+    
+    
     .nav-list{
         width: 80%;
         margin: auto;
@@ -170,18 +173,42 @@
     }
     #header .nav-list ul {
         position: initial;
-        display: block;
+        display: flex;
+        flex-direction: row;
         height: auto;
         width: fit-content;
         background-color: transparent;
     }
     #header .nav-list ul li {
-        display: inline-block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        animation: navanima 4s forwards ease-in-out;
+    }
+    #header .nav-list ul li:hover .navbarAnimation {
+        animation: navanima .4s forwards ease-in-out;
+        background-color: var(--heading);
+    }
+    .navbarAnimation{
+        width: 80%;
+        height: 4px;
     }
     #header .nav-list ul li a {
-        font-size:1vmax;
+        font-size:.8vmax;
+        font-weight: 700;
+        letter-spacing: 0;
     }
     #header .nav-list ul a:after {
         display: none;
     }
+}
+@keyframes navanima {
+    0%{
+        width:0%;
+    }
+    100%{
+        width: 80%;
+    }
+
 }

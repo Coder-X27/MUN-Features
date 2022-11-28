@@ -1,0 +1,37 @@
+#banner{
+    width: 100vw;
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+    position: relative;
+}
+#banner::before{
+    width: 100vw;
+    height: 40vh;
+    background-color: black;
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    opacity: .8;
+    z-index: -1;
+}
+.bannerTitle{
+    color: var(--heading);
+    font-size: 4vmax;
+    text-transform: uppercase;
+    font-weight: 500;
+}
+.bannerTitle2{
+    color: var(--fontcolor);
+    font-size: 2vmax;
+    font-weight: 500;
+}
+@media only screen and (max-width:500px){
+    .bannerTitle{
+        font-size: 3vmax;
+    }
+}

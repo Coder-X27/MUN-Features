@@ -1,0 +1,37 @@
+.team{
+    flex-direction: row;
+    width: 100%;
+    min-height: 100vh;
+    background:linear-gradient(60deg ,var(--heading) 50%, var(--theme) 0%,var(--heading) 100%);
+    flex-wrap: wrap;
+}
+.teamMember{
+    width: 20%; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+}
+.memberImg{
+    width: 100%;
+    height: 10rem;
+}
+.teamMember img{
+    width: 100%;
+    height: 25vmax;
+    border-radius: 20px;
+    border: 5px solid var(--fontcolor);
+    transition: all 1s ease-in-out;
+}
+.teamMember img:hover{
+    transform: scale(1.1);
+}
+.memberName{
+    font-size: 1vmax;
+    text-transform: uppercase;
+}
+.memberRank{
+    font-size: 1vmax;
+    text-transform: uppercase;
+}

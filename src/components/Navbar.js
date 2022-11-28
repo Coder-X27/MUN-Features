@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
+import { Link } from 'react-router-dom';
 import '../styles/Navbar.css'
 const Navbar = () => {
-    const header = document.querySelector('.header.container');
+    const header = document.getElementById('header');
     document.addEventListener('scroll', () => {
         var scroll_position = window.scrollY;
-        if (scroll_position > 100) {
+        if (scroll_position > 50) {
             header.style.backgroundColor = 'black';
         } else {
             header.style.backgroundColor = 'transparent';
@@ -14,6 +15,10 @@ const Navbar = () => {
     const toggelSwitch = () => {
         switchToggled ? setSwitchToggled(false) : setSwitchToggled(true);
     };
+    const cln=(e)=>{
+        switchToggled ? setSwitchToggled(false):setSwitchToggled(true);
+        e.preventDefault();
+    }
     return (
         <div id="header">
             <div className="header container">
@@ -30,16 +35,13 @@ const Navbar = () => {
                         <ul className={
                             switchToggled ? "active" : ""
                         }>
-                            <li><a href="#Hero" data-after="Home">Home</a></li>
-                            <li><a href="#About" data-after="About">About</a></li>
-                            <li><a href="#projects" data-after="Registrations">Registrations</a></li>
-                            <li><a href="#about" data-after="Agenda">Agenda</a></li>
-                            <li><a href="#contact" data-after="Gallery">Gallery</a></li>
-                            <li><a href="#contact" data-after="Team">Team</a></li>
-                            <li><a href="#contact" data-after="Team">MUN</a></li>
-                            <li><a href="#contact" data-after="Team">Sponsers</a></li>
-                            <li><a href="#contact" data-after="Team">Events</a></li>
-                            <li><a href="#contact" data-after="Contact">Contact</a></li>
+                            <li onClick={cln}><Link  to="/" data-after="Home">Home</Link><div className="navbarAnimation"></div></li>
+                            <li onClick={cln}><Link  to="/about" data-after="About">About</Link><div className="navbarAnimation"></div></li>
+                            <li onClick={cln}><Link  to="/sponsers" data-after="Team">Sponsers</Link><div className="navbarAnimation"></div></li>
+                            <li onClick={cln}><Link  to="/" data-after="Registrations">Registrations</Link><div className="navbarAnimation"></div></li>
+                            <li onClick={cln}><Link  to="/team" data-after="Team">Team</Link><div className="navbarAnimation"></div></li>
+                            <li onClick={cln}><Link  to="/events" data-after="Team">Events</Link><div className="navbarAnimation"></div></li>
+                            <li onClick={cln}><Link  to="/contact" data-after="Contact">Contact</Link><div className="navbarAnimation"></div></li>
                         </ul>
                     </div>
                 </div>

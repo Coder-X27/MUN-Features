@@ -1,0 +1,26 @@
+.sponsers{
+    width: 100%;
+    background:linear-gradient(60deg ,var(--heading) 50%, var(--theme) 0%,var(--heading) 100%);
+    
+}
+.sponserItem{
+    display: flex; 
+    flex-wrap: wrap; 
+    justify-content: space-evenly;
+    width:80%;
+    margin: auto;
+    margin-top: 2vmax;
+    margin-bottom: 2vmax;
+    min-height: 20vmax;
+}
+.sponserItem img{
+    width: 70%;
+    margin: auto;
+}
+.sponserTilt{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin: auto;
+}
